@@ -1,7 +1,13 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@static/*": ["./public/*"],
+      "@atoms/*": ["./src/app/atoms/*"],
+      "@molecules/*": ["./src/app/molecules/*"],
+      "@organisms/*": ["./src/app/organisms/*"],
+      "@templates/*": ["./src/app/templates/*"],
+      "@pages/*": ["./src/app/pages/*"],
     }
   }
 }
