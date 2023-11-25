@@ -1,0 +1,7 @@
+.panel {
+  display: none;
+}
+
+button[aria-expanded="true"] + .panel {
+  display: block;
+}

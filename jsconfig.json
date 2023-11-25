@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"],
       "@static/*": ["./public/*"],
-      "@atoms/*": ["./src/app/atoms/*"],
-      "@molecules/*": ["./src/app/molecules/*"],
-      "@organisms/*": ["./src/app/organisms/*"],
-      "@templates/*": ["./src/app/templates/*"],
-      "@pages/*": ["./src/app/pages/*"],
+      "@atoms/*": ["./src/atoms/*"],
+      "@molecules/*": ["./src/molecules/*"],
+      "@organisms/*": ["./src/organisms/*"],
+      "@templates/*": ["./src/templates/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@/*": ["./src/*"],
     }
   }
 }

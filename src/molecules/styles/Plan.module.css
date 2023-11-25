@@ -1,0 +1,23 @@
+.container {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.offer {
+  margin-bottom: 10px;
+}
+
+.proposal {
+  padding: 24px;
+  margin-bottom: 10px;
+}
+
+.proposal ul {
+  margin-top: 10px;
+}
+
+.information {
+  margin: 16px 0;
+  color: rgba(21, 29, 81, 0.5);
+}

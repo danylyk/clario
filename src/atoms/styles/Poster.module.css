@@ -1,0 +1,29 @@
+.poster {
+  padding: 16px 24px;
+  border-radius: 14px;
+  background-color: var(--poster-color);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.poster_overlay:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 64px;
+  z-index: 2;
+  pointer-events: none;
+  background: transparent;
+  background: -moz-linear-gradient(180deg, transparent 0%, var(--poster-color) 90%);
+  background: -webkit-linear-gradient(180deg, transparent 0%, var(--poster-color) 90%);
+  background: linear-gradient(180deg, transparent 0%, var(--poster-color) 90%);
+}
+
+.poster_container {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 14px;
+}

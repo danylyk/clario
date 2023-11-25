@@ -1,0 +1,48 @@
+.container {
+  border-radius: 16px;
+  background: #F2F8FF;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  white-space: nowrap;
+}
+
+.price {
+  color: #483FDD;
+  margin-bottom: -5px;
+}
+
+.period {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  color: rgba(108, 150, 206, 0.3);
+}
+
+.price div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.price_currency {
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.price_major {
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: -14px;
+}
+
+.price_minor {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  width: 4px;
+}

@@ -1,0 +1,11 @@
+.button {
+  background: transparent;
+  padding: 0;
+  border: none;
+  text-align: left;
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  width: 100%;
+}

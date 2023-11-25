@@ -1,0 +1,26 @@
+.container {
+  color: var(--color);
+  background: var(--shade);
+  border-radius: 20px;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.company img {
+  width: auto;
+  max-width: 100%;
+}
+
+.company {
+  margin-bottom: 30px;
+}
+
+.client {
+  margin-top: 20px;
+}
+
+.container > *:not(.company):not(.client) {
+  flex: 1;
+}

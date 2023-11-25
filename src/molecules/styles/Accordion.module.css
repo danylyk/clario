@@ -1,0 +1,16 @@
+.accordion > div:not(:first-child) {
+  margin-top: 40px;
+}
+
+.accordion > div {
+  position: relative;
+}
+
+.accordion > div:not(:last-child):before {
+  content: '';
+  position: absolute;
+  top: 33px;
+  left: 14px;
+  bottom: -35px;
+  border-left: 1px dashed #151D51;
+}

@@ -1,0 +1,30 @@
+.button {
+  border: none;
+  border-radius: 70px;
+  background: #483FDD;
+  color: #fff;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.size_m {
+  padding: 7px 15px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.size_l {
+  padding: 9px 32px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.button:active {
+  background: #3128b7;
+}

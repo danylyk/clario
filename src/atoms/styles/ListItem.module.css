@@ -1,0 +1,17 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item > *:first-child {
+  align-self: start;
+}
+
+.gap_s {
+  column-gap: 4px;
+}
+
+.gap_m {
+  column-gap: 8px;
+}
