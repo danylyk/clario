@@ -26,7 +26,8 @@ import styles from '@pages/styles/Landing.module.css';
 export const ContextFeatureObserver = createContext();
 
 // I was not given information about the animations, so I implemented them to my taste
-export function Landing() {
+// Google PageSpeed Insights test [after build] (100%, 90%, 95%, 92%)
+export default function Landing() {
   const buttonTopRef = useRef(null);
 
   // Behaviour for feature visibility message
