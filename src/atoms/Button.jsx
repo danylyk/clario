@@ -19,17 +19,37 @@ export function Button({size, href, to, children, className, ...props}) {
 
   if (to) {
     return (
-      <LinkTo className={classes.value} to={to} smooth duration={500} offset={-56} {...props}>{children}</LinkTo>
+      <LinkTo
+        className={classes.value}
+        to={to}
+        smooth
+        offset={-56}
+        duration={500}
+        {...props}
+      >
+        {children}
+      </LinkTo>
     );
   }
 
   if (href) {
     return (
-      <LinkHref className={classes.value} href={href} {...props}>{children}</LinkHref>
+      <LinkHref
+        className={classes.value}
+        href={href}
+        {...props}
+      >
+          {children}
+      </LinkHref>
     );
   }
 
   return (
-    <button className={classes.value} {...props}>{children}</button>
+    <button
+      className={classes.value}
+      {...props}
+    >
+      {children}
+    </button>
   );
 }

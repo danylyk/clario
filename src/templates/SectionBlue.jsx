@@ -18,5 +18,5 @@ export function SectionBlue({children, ...props}) {
         {children}
       </div>
     </section>
-  )
+  );
 }

@@ -12,6 +12,8 @@ const config = {
 }
 
 export function List({gap, inline = false, children, className, ...props}) {
+  // Another approach is to use ListContext to share configs (gap)
+
   const classes = useElementClasses();
 
   classes.add(styles.list);

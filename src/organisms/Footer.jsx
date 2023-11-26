@@ -9,14 +9,14 @@ export function Footer() {
     <div className={styles.container}>
       <Link className={styles.logo} href="/">
         <Image
-          alt='Clario'
+          alt=''
           src={logo}
         />
       </Link>
       <p className="text_5">
-        © 2023 Clario Tech DMCC<br />
+        &copy; 2023 Clario Tech DMCC<br />
         All rights reserved.
       </p>
     </div>
-  )
+  );
 }

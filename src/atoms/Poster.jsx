@@ -10,7 +10,7 @@ export function Poster({color, height, hasOverlay = true, children, className, .
 
   const style = {
     '--poster-color': color,
-    maxHeight: height || 'auto'
+    maxHeight: height || 'none'
   };
 
   return (

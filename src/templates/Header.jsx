@@ -35,7 +35,7 @@ export function Header({targetToMakeFixed, children, ...props}) {
         <div className="container">
           <Link className={styles.logo} href="/">
             <Image
-              alt='Clario'
+              alt=''
               src={logo}
             />
           </Link>
@@ -45,7 +45,7 @@ export function Header({targetToMakeFixed, children, ...props}) {
         <div className="container">
           <Link href="/" className={styles.logo}>
             <Image
-              alt='Clario'
+              alt=''
               src={logo}
             />
           </Link>
@@ -54,5 +54,5 @@ export function Header({targetToMakeFixed, children, ...props}) {
         </div>
       </div>
     </header>
-  )
+  );
 }

@@ -7,5 +7,5 @@ export function SectionPurple({children, ...props}) {
         {children}
       </div>
     </section>
-  )
+  );
 }

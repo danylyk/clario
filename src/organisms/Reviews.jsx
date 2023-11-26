@@ -26,7 +26,10 @@ export function Reviews({items, className, ...props}) {
         delay: 5000,
         disableOnInteraction: false,
       }}
-      modules={[Autoplay, Navigation]}
+      modules={[
+        Autoplay,
+        Navigation,
+      ]}
       {...props}
     >
       {items.map((item, index) => (

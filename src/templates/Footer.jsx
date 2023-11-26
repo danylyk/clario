@@ -10,5 +10,5 @@ export function Footer({...props}) {
         </div>
       </div>
     </footer>
-  )
+  );
 }

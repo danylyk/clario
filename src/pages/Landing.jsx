@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Events } from 'react-scroll';
 import { createContext, useEffect, useRef } from "react";
 
+import { useIntersectionObserver } from "@hooks/useIntersectionObserver";
+
 import { Footer } from "@templates/Footer";
 import { Header } from "@templates/Header";
 import { SectionBlue } from "@templates/SectionBlue";
@@ -11,8 +13,8 @@ import { SectionPurple } from "@templates/SectionPurple";
 
 import { Card } from "@organisms/Card";
 import { Plan } from "@organisms/Plan";
+import { Steps } from "@organisms/Steps";
 import { Reviews } from "@organisms/Reviews";
-import { Accordion } from "@organisms/Accordion";
 
 import { List } from "@atoms/List";
 import { Button } from "@atoms/Button";
@@ -20,10 +22,10 @@ import { Poster } from "@atoms/Poster";
 import { ListItem } from "@atoms/ListItem";
 
 import styles from '@pages/styles/Landing.module.css';
-import { useIntersectionObserver } from "@hooks/useIntersectionObserver";
 
 export const ContextFeatureObserver = createContext();
 
+// I was not given information about the animations, so I implemented them to my taste
 export function Landing() {
   const buttonTopRef = useRef(null);
 
@@ -92,6 +94,13 @@ export function Landing() {
               </ListItem>
             </List>
 
+            {
+              // Poster background and video background may vary on different displays.
+              // I chose such a color that the difference would not be noticeable on smartphones,
+              // as they were a priority
+              //
+              // One of the solutions to this issue could be using a animated svg (for example lottiefiles)
+            }
             <Poster color="#483FDD" hasOverlay={false} className={styles.poster}>
               <video width="240" height="272" playsInline loop muted autoPlay>
                 <source src="/videos/poster-0.mp4" type="video/mp4" />
@@ -298,7 +307,7 @@ export function Landing() {
           <SectionWhite>
             <h2 className={`text_center ${styles.heading_shorter}`}>All you need to do is <span className="text_aqua">3 easy steps</span>.</h2>
 
-            <Accordion
+            <Steps
               className={styles.accordion}
               items={[
                 {
@@ -331,7 +340,7 @@ export function Landing() {
                 price: 2.99,
                 period: '7 days',
                 currency: '$',
-                duration: 1800,
+                duration: 1800, // This value comes from server (difference of dates)
               }}
             />
           </SectionBlue>

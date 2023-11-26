@@ -27,7 +27,11 @@ export function Plan({plan, offer, className, ...props}) {
         </div>
       )}
       
-      <Price price={proposal.price} currency={proposal.currency} period={proposal.period} />
+      <Price
+        price={proposal.price}
+        currency={proposal.currency}
+        period={proposal.period}
+      />
       
       <div className={styles.proposal}>
         <p className="text_4 text_bold text_center">What you get:</p>

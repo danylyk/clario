@@ -1,13 +1,13 @@
 import { AccordionButton } from '@atoms/AccordionButton';
 import { AccordionPanel } from '@atoms/AccordionPanel';
-import styles from '@molecules/styles/AccordionItem.module.css';
+import styles from '@molecules/styles/Step.module.css';
 
-export function AccordionItem({step, summary, children, ...props}) {
+export function Step({number, summary, children, ...props}) {
   return (
     <div className={styles.details} {...props}>
       <AccordionButton>
         <div className={styles.summary}>
-          <div className={styles.step}>{step}</div>
+          <div className={styles.step}>{number}</div>
           <div className="text_4">{summary}</div>
           <div className={styles.arrow}>
             <svg width="24" height="24" viewBox="0 0 24 24">

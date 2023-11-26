@@ -1,12 +1,14 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import styles from '@atoms/styles/AccordionButton.module.css';
 
 export function AccordionButton({children, ...props}) {
+  // Another approach is to use AccordionContext to share state
+
   const [isActive, setActive] = useState(false);
   
-  const toggle = useCallback(() => {
+  const toggle = () => {
     setActive((state) => !state);
-  }, []);
+  };
 
   return (
     <button

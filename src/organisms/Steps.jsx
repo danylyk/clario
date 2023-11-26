@@ -1,9 +1,9 @@
 import { useElementClasses } from '@hooks/useElementClasses';
-import { AccordionItem } from '@molecules/AccordionItem';
+import { Step } from '@molecules/Step';
 
-import styles from '@organisms/styles/Accordion.module.css';
+import styles from '@organisms/styles/Steps.module.css';
 
-export function Accordion({items, className, ...props}) {
+export function Steps({items, className, ...props}) {
   const classes = useElementClasses();
 
   classes.add(styles.accordion);
@@ -12,9 +12,9 @@ export function Accordion({items, className, ...props}) {
   return (
     <div className={classes.value} {...props}>
       {items.map((item, index) => (
-        <AccordionItem key={index} step={index + 1} summary={item.summary}>
+        <Step key={index} number={index + 1} summary={item.summary}>
           <p className="text_5">{item.content}</p>
-        </AccordionItem>
+        </Step>
       ))}
     </div>
   );

@@ -7,5 +7,5 @@ export function SectionWhite({children, ...props}) {
         {children}
       </div>
     </section>
-  )
+  );
 }
