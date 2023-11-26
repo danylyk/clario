@@ -1,6 +1,6 @@
 import { AccordionButton } from '@atoms/AccordionButton';
 import { AccordionPanel } from '@atoms/AccordionPanel';
-import styles from '@atoms/styles/AccordionItem.module.css';
+import styles from '@molecules/styles/AccordionItem.module.css';
 
 export function AccordionItem({step, summary, children, ...props}) {
   return (

@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import LinkHref from 'next/link';
+import { Link as LinkTo } from 'react-scroll';
 import { useElementClasses } from '@hooks/useElementClasses';
 import styles from '@atoms/styles/Button.module.css';
 
@@ -9,16 +10,22 @@ const config = {
   }
 }
 
-export function Button({size, href, children, className, ...props}) {
+export function Button({size, href, to, children, className, ...props}) {
   const classes = useElementClasses();
 
   classes.add(styles.button);
   classes.add(config.sizes[size]);
   classes.add(className);
 
+  if (to) {
+    return (
+      <LinkTo className={classes.value} to={to} smooth duration={500} offset={-56} {...props}>{children}</LinkTo>
+    );
+  }
+
   if (href) {
     return (
-      <Link className={classes.value} href={href} {...props}>{children}</Link>
+      <LinkHref className={classes.value} href={href} {...props}>{children}</LinkHref>
     );
   }
 

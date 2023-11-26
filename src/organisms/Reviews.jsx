@@ -2,11 +2,11 @@ import { Fragment } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 
+import { useElementClasses } from '@hooks/useElementClasses';
 import { Review } from '@atoms/Review';
 
 import 'swiper/css';
-import styles from '@molecules/styles/Reviews.module.css';
-import { useElementClasses } from '@hooks/useElementClasses';
+import styles from '@organisms/styles/Reviews.module.css';
 
 export function Reviews({items, className, ...props}) {
   const classes = useElementClasses();

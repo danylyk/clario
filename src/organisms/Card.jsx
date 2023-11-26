@@ -1,20 +1,34 @@
 import Image from 'next/image';
+import { useContext, useEffect, useRef } from 'react';
+
 import { useElementClasses } from '@hooks/useElementClasses';
+
+import { ContextFeatureObserver } from '@pages/Landing';
 
 import { List } from '@atoms/List';
 import { ListItem } from '@atoms/ListItem';
 import { Poster } from '@atoms/Poster';
 
-import styles from '@molecules/styles/Card.module.css';
+import styles from '@organisms/styles/Card.module.css';
 
 export function Card({title, description, list, color, height = 372, className, children, ...props}) {
+  const observer = useContext(ContextFeatureObserver);
   const classes = useElementClasses();
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    observer.observe(cardRef.current);
+
+    return () => {
+      observer.unobserve(cardRef.current);
+    }
+  }, []);
 
   classes.add(styles.card);
   classes.add(className);
 
   return (
-    <div className={classes.value} {...props}>
+    <div className={classes.value} ref={cardRef} data-feature={title} {...props}>
       <Poster className={styles.poster} color={color} height={height}>
         {children}
       </Poster>

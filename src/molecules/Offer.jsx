@@ -1,8 +1,11 @@
 import { useTimer } from '@hooks/useTimer';
-import styles from '@atoms/styles/Offer.module.css';
+import { useTimerFormat } from '@hooks/useTimerFormat';
 
-export function Offer({time, ...props}) {
-  const timer = useTimer(time);
+import styles from '@molecules/styles/Offer.module.css';
+
+export function Offer({duration, ...props}) {
+  const time = useTimer(duration);
+  const timer = useTimerFormat(time);
 
   return (
     <div className={styles.offer} {...props}>

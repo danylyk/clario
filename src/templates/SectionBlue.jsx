@@ -1,6 +1,6 @@
-import styles from '@templates/styles/SectionBlue.module.css';
 import Image from 'next/image';
 
+import styles from '@templates/styles/SectionBlue.module.css';
 import art from '@static/images/art-element-0.svg';
 
 export function SectionBlue({children, ...props}) {

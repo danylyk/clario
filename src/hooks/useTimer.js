@@ -1,25 +1,27 @@
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 
-function format(major, minor, metric) {
-  const majorFormatted = major.toString().padStart(2, '0');
-  const minorFormatted = minor.toString().padStart(2, '0');
+export function useTimer(duration) {
+  const [time, setTime] = useState(duration);
 
-  return {
-    value: `${majorFormatted}:${minorFormatted}`,
-    metric: metric,
-  };
-}
-
-export function useTimer(time) {
-  return useMemo(() => {
-    const minutes = Math.floor(time / 60);
-
-    if (minutes <= 60) {
-      return format(minutes, time - minutes * 60, 'min');
+  useEffect(() => {
+    if (!duration) {
+      return () => {};
     }
-    
-    const hours = Math.floor(time / 60 / 60);
 
-    return format(hours, minutes - hours * 60, 'hr');
-  }, [time]);
+    const timer = setInterval(() => {
+      setTime((time) => {
+        if (time <= 1) {
+          clearInterval(timer);
+        }
+
+        return time - 1;
+      })
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+    }
+  }, [duration]);
+
+  return time;
 }

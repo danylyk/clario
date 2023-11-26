@@ -1,4 +1,6 @@
 .section {
   padding: 50px var(--container-padding);
   background-color: #EFF1FF;
+  color: var(--text-color);
+  position: relative;
 }

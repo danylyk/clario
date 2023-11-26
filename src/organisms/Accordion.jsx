@@ -1,6 +1,7 @@
-import { AccordionItem } from '@atoms/AccordionItem';
 import { useElementClasses } from '@hooks/useElementClasses';
-import styles from '@molecules/styles/Accordion.module.css';
+import { AccordionItem } from '@molecules/AccordionItem';
+
+import styles from '@organisms/styles/Accordion.module.css';
 
 export function Accordion({items, className, ...props}) {
   const classes = useElementClasses();

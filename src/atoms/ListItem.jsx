@@ -1,5 +1,5 @@
-import styles from '@atoms/styles/ListItem.module.css';
 import { useElementClasses } from '@hooks/useElementClasses';
+import styles from '@atoms/styles/ListItem.module.css';
 
 const config = {
   gaps: {

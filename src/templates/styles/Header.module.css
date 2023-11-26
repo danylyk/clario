@@ -2,6 +2,12 @@
 .fixed {
   padding: 12px var(--container-padding);
   background-color: #fff;
+  padding-top: 13px;
+  margin-top: -1px;
+}
+
+.static {
+  text-align: center;
 }
 
 .fixed {
@@ -11,7 +17,6 @@
   right: 0;
   z-index: 700;
 
-  display: none;
   visibility: hidden;
   opacity: 0;
 
@@ -29,7 +34,6 @@
 }
 
 .fixed.active {
-  display: block;
   visibility: visible;
   opacity: 1;
 
@@ -38,4 +42,31 @@
   -ms-transform: none;
   -moz-transform: none;
   -webkit-transform: none;
+}
+
+.fixed :global(.container) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 14px;
+}
+
+.logo {
+  display: inline-block;
+  padding: 5px 0;
+  line-height: 0;
+}
+
+.logo img {
+  height: 22px;
+  width: auto;
+}
+
+.fixed .logo {
+  margin-right: auto;
+}
+
+.fixed :global(.container) > * {
+  width: auto;
 }
