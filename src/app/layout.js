@@ -2,6 +2,7 @@ import '@static/styles/reset.css'
 import '@static/styles/normalize.css'
 import '@static/styles/fonts.css'
 import '@static/styles/globals.css'
+import '@static/styles/media.css'
 
 export const metadata = {
   title: 'Clario',

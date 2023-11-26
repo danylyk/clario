@@ -11,12 +11,13 @@ const config = {
   }
 }
 
-export function List({gap, inline = false, children, ...props}) {
+export function List({gap, inline = false, children, className, ...props}) {
   const classes = useElementClasses();
 
   classes.add(styles.list);
   classes.add(styles.inline, inline);
   classes.add(config.gaps[gap]);
+  classes.add(className);
 
   return (
     <ul className={classes.value} {...props}>

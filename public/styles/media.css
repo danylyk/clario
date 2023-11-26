@@ -1,0 +1,20 @@
+:root {
+  --container: 480px;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+@media (max-width: 540px) {
+  :root {
+    --container: 380px;
+  }
+}
+
+@media (max-width: 440px) {
+  :root {
+    --container: 280px;
+  }
+}

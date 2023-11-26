@@ -3,7 +3,7 @@ export function useElementClasses(className = '') {
     value: className || '',
     add: function(className, condition = true) {
       if (condition && className) {
-        this.value += ` ${className}`;
+        this.value = `${this.value} ${className}`.trim();
       }
     },
   };

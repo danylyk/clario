@@ -7,10 +7,16 @@ import { Button } from '@atoms/Button';
 import { ListItem } from '@atoms/ListItem';
 
 import styles from '@molecules/styles/Plan.module.css';
+import { useElementClasses } from '@hooks/useElementClasses';
 
-export function Plan({...props}) {
+export function Plan({className, ...props}) {
+  const classes = useElementClasses();
+
+  classes.add(styles.container);
+  classes.add(className);
+
   return (
-    <div className={styles.container} {...props}>
+    <div className={classes.value} {...props}>
       <div className={styles.offer}>
         <Offer time={100} />
       </div>

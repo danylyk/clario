@@ -1,5 +1,11 @@
 .slider {
+  --frame: max(calc((100vw - var(--container)) / 2), var(--container-padding));
+
   padding-bottom: 36px;
+  padding-left: var(--frame);
+  padding-right: var(--frame);
+  margin-left: calc(var(--frame) * -1);
+  margin-right: calc(var(--frame) * -1);
 }
 
 .slider :global(.swiper-slide) {

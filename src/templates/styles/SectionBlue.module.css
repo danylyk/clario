@@ -1,0 +1,26 @@
+.section {
+  padding: 40px var(--container-padding);
+  background-color: #483FDD;
+  color: #fff;
+  padding-top: 170px;
+  position: relative;
+}
+
+.art {
+  background-color: #4D56E5;
+  border-radius: 50%;
+  width: 520px;
+  height: 520px;
+  overflow: hidden;
+  position: absolute;
+  top: -370px;
+  left: 50%;
+  margin-left: -260px;
+  text-align: center;
+}
+
+.art img {
+  display: inline-block;
+  margin-top: 390px;
+  margin-left: -10px;
+}

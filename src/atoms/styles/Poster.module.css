@@ -1,10 +1,14 @@
 .poster {
-  padding: 16px 24px;
+  padding: 16px;
   border-radius: 14px;
   background-color: var(--poster-color);
   text-align: center;
   overflow: hidden;
   position: relative;
+}
+
+.poster_overlay {
+  padding-top: 40px;
 }
 
 .poster_overlay:after {
@@ -17,9 +21,9 @@
   z-index: 2;
   pointer-events: none;
   background: transparent;
-  background: -moz-linear-gradient(180deg, transparent 0%, var(--poster-color) 90%);
-  background: -webkit-linear-gradient(180deg, transparent 0%, var(--poster-color) 90%);
-  background: linear-gradient(180deg, transparent 0%, var(--poster-color) 90%);
+  background: -moz-linear-gradient(180deg, transparent 0%, var(--poster-color) 60%);
+  background: -webkit-linear-gradient(180deg, transparent 0%, var(--poster-color) 60%);
+  background: linear-gradient(180deg, transparent 0%, var(--poster-color) 60%);
 }
 
 .poster_container {
